@@ -1,0 +1,796 @@
+/*Designed to work with Firefox. Keys do NOT play in other browsers*/
+
+/*Debug: c1sharp and b1 active backbround effect do not work. Could not figure it out as of now*/
+
+html {
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+}
+
+
+body {
+background-color: rgba(128, 124, 124, 0.57);
+}
+
+
+.FrameDiv {
+    
+width: 1700px;
+height: 665px;
+background-color: gray;
+background: linear-gradient(to top left, rgba(100, 100, 100, .9) 50%, 
+rgba(130, 130, 140, .9)100%, rgba(240, 240, 240, .9)20%);
+
+margin: 80px auto 1px auto; 
+padding-top: 30px; 
+border-top-right-radius: 50px 60px;
+border-top-left-radius: 50px 60px;
+border-bottom-right-radius: 15px;
+border-bottom-left-radius: 15px;
+box-shadow: 25px 30px 10px gray;
+border: 5px solid black;
+border-style: outset;}
+    
+.TopButtons {
+width: 1670px;
+height: 270px;
+margin: 20px;
+}
+
+.OnOFFSwitch {
+width: 40px;
+height: 40px;
+background-color: rgba(60,60,60,.8);
+border: 1px solid rgba(10,10,10,1);
+border-radius: 20px; 
+margin-left: -585px;
+BOX-SHADOW: INSET 10PX 5PX 5PX RGB(30,30,30);
+position: relative;
+}
+
+.OnOffText {
+  width: 50px;
+  height: 5px;
+    position: absolute;
+    padding-top:45px;
+font-size: .75em;
+color: rgb(15,15,15);/*got rid of you*/
+letter-spacing: .25em;
+}
+
+.ScreenINtopButton{
+    width: 500px;
+    height: 250px;
+    margin-right: auto; margin-left: auto;
+    background-color: rgb(85, 85, 85);
+    border: 8px solid black;
+    border-style: inset;
+ 
+}
+
+div .ShowScreenOptions { /*actual display of keyboard*/
+width: 500px;
+height: 250px;
+margin-right: auto; margin-left: auto;
+position: relative;
+top: -1px;
+background-color: rgb(0, 0, 150);
+left: 583px; 
+
+}
+
+.ScreenWelcome {
+   text-align: center;
+   margin-top: 0px;
+   padding-top: 14px;
+   color: transparent;
+   letter-spacing: .1em;
+   animation-name: WelcomeText;
+   animation-duration: 3s;
+   animation-fill-mode: forwards ease-in;
+}
+
+@keyframes WelcomeText {
+    to {color: gray;}
+}
+
+.SongTextScreen {
+    color: gray;
+    margin-top: 130px;
+    margin-left: 29px;
+    font-weight: bold;
+}
+
+input[type=checkbox] {display: none;}
+
+
+.ShowScreenOptions {display: none;} /*screen off unless turned on*/
+
+#Power:checked ~ .ShowScreenOptions {display: block;}
+
+
+ audio { 
+    position: absolute;
+    width: 200px;
+    margin-left: 20px;
+    bottom: 10px;
+    background-color: green;
+    opacity: .80;
+}
+
+.PianoKeys
+{
+    width: 1700px;
+    height: 260px;
+    background-color: rgb(65, 65, 65);
+    top: 100px;
+    margin-bottom: 20px;
+    position: relative;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+
+
+/*audio non-sharp keys*/
+.C1, .C2, .C3, .C4, .C5, .C6, .D1, .D2, .D3, .D4, .D5, .E1, .E2, .E3, .E4, .E5, .F1, .F2, .F3, .F4, .F5, .G1, .G2, .G3, 
+.G4, .G5, .A1, .A2, .A3, .A4, .A5, .B1, .B2, .B3, .B4, .B5 {
+    width: 35px;
+    height: 273px;
+    opacity: .00001;
+    padding-right: 5px;
+    position: absolute;
+    bottom: -26px;
+    z-index: 1; 
+}
+
+/*Position of keys*/
+
+.C1 {
+left: -18px;
+}
+
+.C1SHARP {
+    left: 8px;
+}
+
+.D1 {
+   
+    left: 29px;
+}
+
+.D1Sharp {
+left: 49px;
+
+}
+
+.E1 {
+    
+    left: 77px;
+}
+
+
+.F1 {
+
+    left: 124px;
+
+}
+
+.f1sharp {
+    
+    left: 145px;}
+
+.G1 {
+  
+    left: 171px;
+   
+}
+
+.g1sharp {
+    
+    left: 192px;
+}
+
+.A1 {
+    
+    left: 218px;
+}
+
+.a1sharp {
+ left:239px;   
+}
+
+.B1 {
+  
+    left: 266px;
+   
+}
+
+.C2 {
+   
+    left: 314px;
+}
+
+
+
+.c2sharp {
+left: 335px;
+}
+
+.D2 {
+    left: 360px;
+}
+
+.d2sharp {
+
+left: 381px;
+
+}
+
+
+.E2 {
+   
+    left: 407px;
+    
+}
+
+.F2 {
+   
+    left: 454.5px;
+}
+
+.f2sharp {
+    left: 475px;
+    
+}
+
+.G2 {
+    left: 502px;
+}
+
+.g2sharp {
+    
+    left: 523px;
+    
+}
+
+.A2 {
+    
+    left: 550px;
+   
+}
+
+.a2sharp {
+    left: 571px;
+    
+}
+
+.B2 {
+   
+    left: 596px;
+   
+
+}
+
+.C3{
+   
+    left: 644px;
+    
+
+}
+
+.c3sharp {
+left: 665px;
+
+}
+
+.D3 {
+  
+    left: 691px;
+    
+
+}
+
+.d3sharp {
+left: 711px;
+
+}
+
+.E3 {
+   
+    left: 738px;
+   
+
+}
+
+.F3 {
+   
+    left: 785px;
+   
+}
+
+.f3sharp {
+    left:806px;
+}
+
+.G3 {
+  
+    left: 833px;
+
+}
+
+.g3sharp {
+    left: 854px;
+}
+
+.A3 {
+  
+    left: 879px;
+
+
+}
+
+.a3sharp {
+    left: 900px;
+    
+}
+
+.B3 {
+   
+    left: 927px;
+
+}
+
+.C4 {
+   
+    left: 975px;
+
+}
+
+.c4sharp {
+left: 996px;
+}
+
+.D4 {
+   
+    left: 1021px;
+
+}
+
+.d4sharp {
+left: 1042px;
+}
+
+.E4 {
+   
+    left: 1068px;
+
+}
+
+.F4 {
+   
+    left: 1115px;
+   
+    
+}
+
+.f4sharp {
+    left: 1136px;
+}
+
+.G4 {
+   
+    left: 1163px;
+   
+    
+}
+
+.g4sharp {
+    left: 1184px;
+}
+
+.A4 {
+   
+    left: 1210px;
+   
+
+}
+
+.a4sharp {
+    left: 1231px;
+}
+
+.B4 {
+    
+    left: 1260px;
+
+}
+
+.C5 {
+   
+    left: 1307px;
+
+}
+
+.c5sharp {
+
+left:1325px;
+}
+
+.D5 {
+  
+    left: 1354px;
+
+}
+
+.d5sharp {
+left: 1372px;
+}
+
+.E5 {
+    
+    left: 1402px;
+
+}
+
+.F5 {
+  
+    left: 1448px;
+
+}
+
+.f5sharp {
+    
+    left: 1469px;
+}
+
+.G5 {
+  
+    left: 1494px;
+
+}
+
+.g5sharp {
+    left: 1515px;
+}
+
+.A5 {
+   
+    left: 1541px;
+
+}
+
+.a5sharp {
+    left: 1562px;
+    
+}
+
+.B5 {
+  
+    left: 1588px;
+
+}
+
+.C6 {
+    left: 1636px;
+}
+
+
+
+div .WhiteKeys {
+background-color: rgb(220, 220, 220);
+height: 230px;
+width: 41.21px;
+max-width: 44.22px;
+border-style: outset;
+border-width: 3px;
+float: left; 
+background: linear-gradient(to top, rgb(200, 200, 200), rgb(255, 255, 255)60%);
+}
+
+div .WhiteKeys:active {
+  background-color: rgb(190, 190, 190);
+background: linear-gradient(rgb(220, 220, 220),rgb(190, 190, 190));
+height: 229px;
+box-shadow: inset 2px 4px 15px rgb(170, 170, 170);
+}
+
+
+/*Black keys positions*/
+
+div .Firstof2Set {
+    margin-left: 25px;
+}
+
+div .Final23Set {
+	margin-left: 33px;
+}
+
+div .Center3Set {
+    margin-left: 28px;
+}
+
+div .First3Set {
+    margin-left: 22px;
+}
+
+
+    .First3Set, .Center3Set, .Final23Set, .Firstof2Set       {
+    width: 25px;
+    height: 146px;
+    background-color:rgb(20, 20, 20);
+    margin-left: 33px;
+    position: absolute;  
+    top: 0px;
+    border-style: outset;
+}
+
+
+.BlackAudioSize {
+    z-index: 20; /*crucial z-index. Otherwise, white active is activated when black is pressed*/
+    width: 30px;
+    height: 188px;
+    position: absolute;
+    opacity: 0.0000001;
+}
+
+
+/* black key audio*/
+
+
+
+
+
+.BlackAudioSize
+{
+   left: -21px; 
+    bottom: -40px;
+    position: absolute;
+}
+/*end of two set black audio*/
+
+.blackkey:active {
+    height: 145px;
+    box-shadow: inset -1px -4px 3px rgb(150, 150, 150);
+    z-index: 4;
+
+}
+
+.audioc1sharp {
+    left: 7px; bottom: 69px; opacity: .00001; z-index: 5;
+ }
+ 
+
+.StyleHeading, .VoicesHeading{
+    width: 444px;
+    height: 15px;
+    position: absolute;
+    top: -27px;
+    font-size: .65em;
+    background-color: rgba(50,50,50,.8);
+    color: rgba(195,195,195,.9);
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 5px;
+   letter-spacing: .4em;
+   font-family: sans-serif;
+}
+.StyleHeading {
+    left: 85px;
+}
+
+.VoicesHeading {
+    left: 1145px;
+}
+
+.ULStyles, .ULVoices {
+    width: 500px;
+    height: 60px;
+    float: left;
+    list-style-type: none;
+    position: absolute; 
+    top: 25px; 
+    letter-spacing: .2em;
+    font-size: .6em;
+}
+.ULStyles {
+    left: 30px;
+}
+
+.ULVoices {
+    left: 1090px;
+   
+}
+
+li {
+    width: 130px;
+    height: 1px;
+    background-color: rgba(140,140,140,.9);
+    background: linear-gradient(rgba(140,140,140,.9), rgba(50,50,50,.9), rgba(10,10,10,.2));
+    color: rgb(230,230,230);
+    margin: 5px 11px 15px 14px;
+    float: left;
+    text-align: right;
+    border: 1px solid gray;
+    padding-bottom:  30px;  
+    border-radius: 0px;
+    font-weight: bold;
+}
+
+li:active {
+    background-color: rgb(50,50,50);
+    overflow: hidden;
+}
+
+.LIP { /*list item's paragraph*/
+    padding-top: 1px;
+    padding-bottom: 15px;
+    padding-right:  15px;
+}
+
+.drumkit {
+    padding-right: 3px;
+    font-size: .99em;  
+}
+
+.PianoVoice, .StringsVoice, .TrumpetVoice, .GuitarVoice, .AccordionVoice, .ChoirVoice, .SaxophoneVoice,
+.BassVoice, .OrganVoice, .BrassVoice, .FluteVoice, .DrumKitVoice{
+
+    width: 50px;
+    height: 20px;
+    opacity: .4001;
+    position:absolute;
+    background-color: white; /*Add linear gradient to player? Can you?*/
+    z-index: 50;
+}
+
+.PianoVoice {
+    left: 1125px;
+    TOP: 45PX;
+}
+
+.StringsVoice {
+
+    left: 1282px;
+    TOP: 45PX;
+
+}
+
+.TrumpetVoice {
+    left: 1440px;
+    TOP: 45PX;
+
+}
+
+.GuitarVoice {
+
+    left: 1125px;
+    TOP: 100PX;
+}
+
+.AccordionVoice {
+
+      left: 1282px;
+    TOP: 100PX;
+
+}
+
+.ChoirVoice {
+     left: 1440px;
+    TOP: 100PX;
+
+}
+
+.SaxophoneVoice {
+      left: 1125px;
+    TOP: 150PX;
+
+}
+
+.BassVoice {
+      left: 1282px;
+    TOP: 150PX;
+
+}
+
+.OrganVoice {
+       left: 1440px;
+    TOP: 150PX; 
+
+}
+.BrassVoice {
+    left: 1125px;
+    TOP: 206PX;
+
+}
+
+.FluteVoice {
+     left: 1282px;
+    TOP: 206PX;
+
+}
+.DrumKitVoice {
+   left: 1440px;
+    TOP: 206PX; 
+
+}
+
+.styleposition {
+    width: 50px;
+    height: 20px;
+    opacity: .4001;
+    position:absolute;
+    background-color: white;  
+	z-index: 50;
+}
+
+.RockStyle {
+    top:48px;
+    left: 64px;
+}
+
+.JazzStyle {
+    top:48px;
+    left: 222px;
+
+}
+
+.LatinStyle {
+     top:48px;
+    left: 380px; 
+}
+
+.PopStyle {
+    top:100px;
+    left: 66px;
+
+}
+
+.BalladStyle {
+   top:100px;
+    left: 222px;
+}
+
+.RandB {
+     top:100px;
+    left: 380px;
+}
+
+.BallroomStyle {
+   top:155px;
+    left: 66px;
+}
+
+.WorldStyle {
+  top:155px;
+    left: 222px;
+}
+
+.DanceStyle {
+  top:155px;
+    left: 380px;
+}
+.CountryStyle {
+    top:208px;
+    left: 66px; 
+}
+
+.ShowStyle {
+   top:206px;
+    left: 222px;
+}
+
+.padStyle {
+    padding-right: 1px;
+}
+
+
+footer {
+	position: absolute; 
+	bottom: 50px;
+	left: 30px;
+}

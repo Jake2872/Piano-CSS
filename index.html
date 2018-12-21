@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<!--Designed to work with Firefox. Keys do NOT play in other browsers-->
+
+<html lang="en">
+    <head>
+        <title>Piano</title>
+        <link href="css-Piano-Project.css" type="text/css" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+        <meta name="description" content="A piano created using CSS">
+        <meta name="author" content="Jacob Kupperman">
+        <meta name="keywords" content="CSS, piano, css box, css piano, keyboard">
+
+        <style>
+
+/*Debug: c1-sharp and b1 active backbround effects do not work. Could not figure it out yet*/
+
+
+        </style>
+
+        </head>
+
+<body>
+
+<div class="FrameDiv"> <!--this contains the upper part of keyboard, and sits behind the div that holds the keys-->
+
+ <div class="TopButtons"> <!--Contains play buttons, voices, style buttons, welcome display-->
+
+    
+<div class="ScreenINtopButton"> 
+    
+    <!--contains the piano's display, located within the TopButtons div/section-->
+    
+<div class="OnOFFSwitch">
+        <label class="OnOffText" for="Power">Power</label>
+            <input type="checkbox" name="OnSwitchBox" id="Power" />
+   <div class="ShowScreenOptions">
+
+<h2 class="ScreenWelcome">Welcome</h2>
+<p class="SongTextScreen">Song</p>
+<audio class="audio1" src="KEYS/ZCHOIR.mp3" controls loop><p></p></audio>
+
+
+</div>
+
+<h2 class="StyleHeading">Style</h2>
+<div>
+        <audio class="RockStyle styleposition" src="DRUMS/ROCK.mp3" controls preload></audio>
+        <audio class="JazzStyle styleposition" src="DRUMS/JAZZ.mp3" controls preload></audio>
+        <audio class="LatinStyle styleposition" src="DRUMS/LATIN.mp3" controls preload></audio>
+        <audio class="PopStyle styleposition" src="DRUMS/POP.mp3" controls preload></audio>
+        <audio class="BalladStyle styleposition" src="DRUMS/BALLAD.mp3" controls preload></audio>
+        <audio class="RandB styleposition" src="DRUMS/RB.mp3" controls preload></audio>
+        <audio class="BallroomStyle styleposition" src="DRUMS/BALLROOM.mp3" controls preload></audio>
+        <audio class="WorldStyle styleposition" src="DRUMS/WORLD.mp3" controls preload></audio>
+        <audio class="DanceStyle styleposition" src="DRUMS/DANCE.mp3" controls preload></audio>
+        <audio class="CountryStyle styleposition" src="DRUMS/CNTRY.mp3" controls preload></audio>
+        <audio class="ShowStyle styleposition" src="DRUMS/SHOW.mp3" controls preload></audio>
+<ul class="ULStyles">
+    <li><p class="LIP">ROCK</p> </li>
+    <li><p class="LIP">JAZZ</p> </li>
+    <li><p class="LIP">LATIN</p> </li>
+    <li> <p class="LIP">POP</p></li>
+    <li><p class="LIP">BALLAD</p> </li>
+    <li><p class="LIP">R &amp; B</p> </li>
+    <li><p class="LIP padStyle">BALLROOM</p> </li>
+    <li><p class="LIP">WORLD</p> </li>
+    <li><p class="LIP">DANCE</p> </li>
+    <li><p class="LIP padStyle">COUNTRY</p> </li>
+    <li><p class="LIP">SHOW</p> </li>
+    <li><p class="LIP">FILE ACCESS</p></li>
+   
+</ul>
+</div>
+<h2 class="VoicesHeading">Voice</h2>
+<div >
+        <audio class="PianoVoice" src="VOICES/PIANO.mp3" controls preload></audio>
+        <audio class="StringsVoice" src="VOICES/STRINGS.mp3" controls preload></audio>
+        <audio class="TrumpetVoice" src="VOICES/TRUMPET.mp3" controls preload></audio>
+        <audio class="GuitarVoice" src="VOICES/GUITAR.mp3" controls preload></audio>
+        <audio class="AccordionVoice" src="VOICES/ACCORD.mp3" controls preload></audio>
+        <audio class="ChoirVoice" src="VOICES/CHOIR.mp3" controls preload></audio>
+        <audio class="SaxophoneVoice" src="VOICES/SAX.mp3" controls preload></audio>
+        <audio class="BassVoice" src="VOICES/BASS.mp3" controls preload></audio>
+        <audio class="OrganVoice" src="VOICES/ORGAN.mp3" controls preload></audio>
+        <audio class="BrassVoice" src="VOICES/BRASS.mp3" controls preload></audio>
+        <audio class="FluteVoice" src="VOICES/FLUTE.mp3" controls preload></audio>
+        <audio class="DrumKitVoice" src="VOICES/DRUMS.mp3" controls preload></audio>
+
+	<ul class="ULVoices">
+        <li><p class="LIP">PIANO</p> </li>
+        <li><p class="LIP">STRINGS</p> </li>
+        <li><p class="LIP">TRUMPET</p> </li>
+        <li> <p class="LIP">GUITAR</p></li>
+        <li><p class="LIP">ACCORD.</p> </li>
+        <li><p class="LIP">CHOIR</p> </li>
+        <li><p class="LIP">SAX.</p> </li>
+        <li><p class="LIP">BASS</p> </li>
+        <li><p class="LIP">ORGAN</p> </li>
+        <li><p class="LIP">BRASS</p> </li>
+        <li><p class="LIP">FLUTE</p> </li>
+        <li><p class="LIP drumkit">DRUM KIT</p></li>
+       
+    </ul>
+	</div>
+
+
+</div>
+
+
+
+</div> <!--ends the ScreenINtopButton div-->
+
+</div>   <!--ends the TopButtons div -->
+
+<div class="PianoKeys"> <!--Contains actual keys-->
+    <div class="WhiteKeys key"> 
+            <audio class="C1 key" src="KEYS/C1.mp3" controls preload></audio>
+
+
+
+
+    </div>
+    <div class="Firstof2Set C1Sharp blackkey">
+    
+    </div> <audio class="BlackAudioSize audioc1sharp" src="KEYS/C1-SHARP.mp3" controls preload></audio>
+    <div class="WhiteKeys key"> 
+
+        <audio class="D1 key" src="KEYS/D1.mp3" controls preload></audio>
+            <!--second black key of 2 sets-->
+    </div>
+    <div class="Final23Set D1Sharp blackkey">
+            <audio class="BlackAudioSize audiod1sharp" src="KEYS/D1-SHARP.mp3" controls preload></audio>
+    </div>  
+    <div class="WhiteKeys key"> 
+
+        <audio class="E1 key" src="KEYS/E1.mp3" controls preload></audio>
+
+    </div>
+    <div class="WhiteKeys key"> 
+           <audio class="F1 key" src="KEYS/F1.mp3" controls preload></audio>
+
+             
+    </div><div class="First3Set f1sharp blackkey">
+    <audio class="BlackAudioSize audiof1sharp" src="KEYS/F1-SHARP.mp3" controls preload></audio>
+    </div>
+    <div class="WhiteKeys"> 
+           <audio class="G1 key" src="KEYS/G1.mp3" controls preload></audio>
+
+
+    </div><div class="Center3Set g1sharp blackkey">
+    <audio class="BlackAudioSize audiog1sharp" src="KEYS/G1-SHARP.mp3" controls preload></audio>
+    </div>
+
+    <div class="WhiteKeys key"> 
+            
+        <audio class="A1 key" src="KEYS/A1.mp3" controls preload></audio>
+            
+    </div><div class="Final23Set a1sharp blackkey">
+        <audio class="BlackAudioSize audioa1sharp" src="KEYS/A1-SHARP.mp3" controls preload></audio>
+
+    </div>
+    <div class="WhiteKeys b1activecolor key"> </div>
+<audio class="B1 key" src="KEYS/B1.mp3" controls preload></audio>
+    <div class="WhiteKeys key"> 
+        <audio class="C2 key" src="KEYS/C2.mp3" controls preload></audio>    
+
+            <!--Firstof2Set is also first for 3 set -->
+    </div>
+
+    <div class="Firstof2Set c2sharp blackkey">
+    <audio class="BlackAudioSize audioc2sharp" src="KEYS/C2-SHARP.mp3" controls preload></audio>
+    </div>
+
+    <div class="WhiteKeys key"> 
+      
+            <audio class="D2 key" src="KEYS/D2.mp3" controls preload></audio>
+
+            
+    </div>
+
+    <div class="Final23Set d2sharp blackkey">
+    <audio class="BlackAudioSize audiod2sharp" src="KEYS/D2-SHARP.mp3" controls preload></audio>
+    </div>
+    <div class="WhiteKeys key">   
+                <audio class="E2 key" src="KEYS/E2.mp3" controls preload></audio>
+
+    </div>
+    <div class="WhiteKeys key"> 
+                <audio class="F2 key" src="KEYS/F2.mp3" controls preload></audio>
+            
+            </div> <div class="First3Set f2sharp blackkey">
+    <audio class="BlackAudioSize audiof2sharp" src="KEYS/F2-SHARP.mp3" controls preload></audio>
+    </div>
+    <div class="WhiteKeys key">
+                <audio class="G2 key" src="KEYS/G2.mp3" controls preload></audio>
+           
+             </div><div class="Center3Set g2sharp blackkey"> 
+        <audio class="BlackAudioSize audiog2sharp" src="KEYS/G2-SHARP.mp3" controls preload></audio>
+
+    </div>
+    <div class="WhiteKeys key"> 
+                <audio class="A2 key" src="KEYS/A2.mp3" controls preload></audio>
+            </div><div class="Final23Set a2sharp blackkey">
+            <audio class="BlackAudioSize audioa2sharp" src="KEYS/A2-SHARP.mp3" controls preload></audio>
+
+    </div>
+    <div class="WhiteKeys key">
+                <audio class="B2 key" src="KEYS/B2.mp3" controls preload></audio>
+            </div>
+    <div class="WhiteKeys key"> 
+                <audio class="C3 key" src="KEYS/C3.mp3" controls preload></audio>
+            </div><div class="Firstof2Set c3sharp blackkey">
+    <audio class="BlackAudioSize audioc3sharp" src="KEYS/C3-SHARP.mp3" controls preload></audio>
+    
+    </div>
+    <div class="WhiteKeys key">
+                <audio class="D3 key" src="KEYS/D3.mp3" controls preload></audio>
+             </div><div class="Final23Set d3sharp blackkey">
+    <audio class="BlackAudioSize audiod3sharp" src="KEYS/D3-SHARP.mp3" controls preload></audio>
+    </div>
+    <div class="WhiteKeys key"> 
+                <audio class="E3 key" src="KEYS/E3.mp3" controls preload></audio>
+              </div>
+    <div class="WhiteKeys key">
+                <audio class="F3 key" src="KEYS/F3.mp3" controls preload></audio>    
+         </div><div class="Firstof2Set f3sharp blackkey">
+    <audio class="BlackAudioSize audiof3sharp" src="KEYS/F3-SHARP.mp3" controls preload></audio>
+    </div>
+    <div class="WhiteKeys key"> 
+                <audio class="G3 key" src="KEYS/G3.mp3" controls preload></audio>    
+        </div> <div class="Center3Set g3sharp blackkey"> 
+        <audio class="BlackAudioSize audiog3sharp" src="KEYS/G3-SHARP.mp3" controls preload></audio>
+
+    </div>
+    <div class="WhiteKeys key"> 
+                <audio class="A3 key" src="KEYS/A3.mp3" controls preload></audio>     
+       </div> <div class="Final23Set a3sharp blackkey">
+            <audio class="BlackAudioSize audioa3sharp" src="KEYS/A3-SHARP.mp3" controls preload></audio>
+
+    </div>
+    <div class="WhiteKeys key">  
+                <audio class="B3 key" src="KEYS/B3.mp3" controls preload></audio>              
+</div>
+    <div class="WhiteKeys key"> 
+                <audio class="C4 key" src="KEYS/C4.mp3" controls preload></audio>     
+       </div> <div class="Firstof2Set c4sharp blackkey">
+    <audio class="BlackAudioSize audioc4sharp" src="KEYS/C4-SHARP.mp3" controls preload></audio>
+    
+    </div>
+    <div class="WhiteKeys key"> 
+                <audio class="D4 key" src="KEYS/D4.mp3" controls preload></audio>    
+       </div> <div class="Final23Set d4sharp blackkey">
+    <audio class="BlackAudioSize audiod4sharp" src="KEYS/D4-SHARP.mp3" controls preload></audio>
+    </div>
+    <div class="WhiteKeys key"> 
+                <audio class="E4 key" src="KEYS/E4.mp3" controls preload></audio>
+
+    </div>
+    <div class="WhiteKeys key"> 
+                <audio class="F4 key" src="KEYS/F4.mp3" controls preload></audio>    
+         </div><div class="Firstof2Set f4sharp blackkey">
+    <audio class="BlackAudioSize audiof4sharp" src="KEYS/F4-SHARP.mp3" controls preload></audio>
+    </div>
+    <div class="WhiteKeys key">  
+                <audio class="G4 key" src="KEYS/G4.mp3" controls preload></audio>    
+      </div>   <div class="Center3Set g4sharp blackkey"> 
+        <audio class="BlackAudioSize audiog4sharp" src="KEYS/G4-SHARP.mp3" controls preload></audio>
+
+    </div>
+    <div class="WhiteKeys key">  
+                <audio class="A4 key" src="KEYS/A4.mp3" controls preload></audio>     
+       </div> <div class="Final23Set a4sharp blackkey">
+            <audio class="BlackAudioSize audioa4sharp" src="KEYS/A4-SHARP.mp3" controls preload></audio>
+
+    </div>
+    <div class="WhiteKeys key"> 
+
+                <audio class="B4 key" src="KEYS/B4.mp3" controls preload></audio> 
+    </div>
+    <div class="WhiteKeys key"> 
+                <audio class="C5 key" src="KEYS/C5.mp3" controls preload></audio>     
+        <div class="Firstof2Set blackkey"></div></div>
+    <div class="Firstof2Set c5sharp blackkey">
+    <audio class="BlackAudioSize audioc5sharp" src="KEYS/C5-SHARP.mp3" controls preload></audio>
+    
+    </div>
+    <div class="WhiteKeys key"> 
+                <audio class="D5 key" src="KEYS/D5.mp3" controls preload></audio>     
+        <div class="Final23Set blackkey"></div></div> <div class="Final23Set d5sharp blackkey">
+    <audio class="BlackAudioSize audiod5sharp" src="KEYS/D5-SHARP.mp3" controls preload></audio>
+    </div>
+    <div class="WhiteKeys key"> 
+                <audio class="E5 key" src="KEYS/E5.mp3" controls preload></audio>
+
+    </div>
+    <div class="WhiteKeys key"> 
+                <audio class="F5 key" src="KEYS/F5.mp3" controls preload></audio>    
+        </div> <div class="Firstof2Set f5sharp blackkey">
+    <audio class="BlackAudioSize audiof5sharp" src="KEYS/F5-SHARP.mp3" controls preload></audio>
+    </div>
+    <div class="WhiteKeys key"> 
+                <audio class="G5 key" src="KEYS/G5.mp3" controls preload>  </audio>  
+                        
+         </div><div class="Center3Set g5sharp blackkey">
+        <audio class="BlackAudioSize audiog5sharp" src="KEYS/G5-SHARP.mp3" controls preload></audio>
+        
+    </div>
+    <div class="WhiteKeys key"> 
+                <audio class="A5 key" src="KEYS/A5.mp3" controls preload>  </audio>    
+        </div><div class="Final23Set a5sharp blackkey">
+            <audio class="BlackAudioSize audioa5sharp" src="KEYS/A5-SHARP.mp3" controls preload></audio>
+
+    </div>
+    <div class="WhiteKeys key">
+                <audio class="B5 key" src="KEYS/B5.mp3" controls preload>  </audio>            
+</div>
+    <div class="WhiteKeys key">
+                <audio class="C6 key" src="KEYS/C6.mp3" controls preload>  </audio>
+</div>
+    
+    
+
+
+</div> <!--ends piano keys div-->
+
+
+</div><!--ends the FrameDiv (the entire keyboard)-->
+
+<footer> Created by Jacob Kupperman</footer>
+
+</body>
+
+
+</html>
